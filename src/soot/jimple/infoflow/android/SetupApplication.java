@@ -662,7 +662,11 @@ public class SetupApplication {
 			Options.v().set_force_android_jar(androidJar);
 		else
 			Options.v().set_android_jars(androidJar);
-		Options.v().set_src_prec(Options.src_prec_apk_class_jimple);
+
+		//Options.v().set_src_prec(Options.src_prec_apk_class_jimple);
+    // The previous line has been changed in the following one to make it suitable for heldroid
+    Options.v().set_src_prec(Options.src_prec_apk);
+
 		Options.v().set_keep_line_number(false);
 		Options.v().set_keep_offset(false);
 		Main.v().autoSetOptions();
